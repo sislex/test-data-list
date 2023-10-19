@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <label [for]="name">{{label}}</label>
+  <input
+    [id]="name"
+    [name]="name"
+    [ngModel]="value"
+    type="text"
+    (ngModelChange)="onChange($event)"
+  />
+</div>

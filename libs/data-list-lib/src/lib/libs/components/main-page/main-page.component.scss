@@ -1,0 +1,25 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+  .header {
+    height: 100px;
+    flex: 0 0 auto;
+    display: flex;
+    padding-right: 8px;
+    border-bottom: 1px solid black;
+
+    .field {
+      flex: 1;
+      margin: 24px;
+    }
+  }
+
+  .body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+  }
+}

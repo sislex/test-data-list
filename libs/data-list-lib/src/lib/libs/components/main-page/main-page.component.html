@@ -1,0 +1,21 @@
+<div class="main-page">
+  <div class="header">
+    <data-list-field
+      class="field"
+      name="interval"
+      label="Interval"
+      [value]="interval"
+      (emitter)="events($event, 'interval')"
+    ></data-list-field>
+    <data-list-field
+      class="field"
+      name="size"
+      [label]="'Number Of Items (All downloaded items: ' + (dataService.list$ | async)?.length + ')'"
+      [value]="num"
+      (emitter)="events($event, 'size')"
+    ></data-list-field>
+  </div>
+  <div class="body">
+    <data-list-table [data]="dataService.last10Items$ | async"></data-list-table>
+  </div>
+</div>

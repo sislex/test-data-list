@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>id</th>
+    <th>int</th>
+    <th>float</th>
+    <th>color</th>
+    <th>child</th>
+  </tr>
+  <tr *ngFor="let item of data">
+    <td>{{item.id}}</td>
+    <td>{{item.int}}</td>
+    <td>{{item.float}}</td>
+    <td class="border3" [style]="{'border-color': item.color}">{{item.color}}</td>
+    <td>
+      <span>id: {{item.child.id}}</span>
+      <br>
+      <span>color: <span [style]="{'background': item.child.color}">{{item.child.color}}</span></span>
+    </td>
+  </tr>
+</table>
